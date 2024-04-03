@@ -7,7 +7,10 @@ RUN go mod download
 
 COPY .. ./
 
-RUN CGO_ENABLED=0 GOOS=linux go build -v -o quack
+ENV CGO_ENABLED=0
+ENV GOOS=linux
+
+RUN go build -v -o quack
 
 
 FROM alpine:latest
