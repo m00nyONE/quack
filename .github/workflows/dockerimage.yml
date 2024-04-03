@@ -2,7 +2,7 @@ name: Dockerimage CI
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "master"]
     tags: ["v*.*.*"]
 
 env:
